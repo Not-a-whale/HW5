@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 
 namespace HW_5
@@ -6,6 +7,7 @@ namespace HW_5
     class Program
     {
         private static Logger logger;
+        private static string allText = "";
         public enum LogLevels 
         {
             Error, 
@@ -23,7 +25,7 @@ namespace HW_5
             const string infoMessage = "You've been informed!";
             const string warningMessage = "This is a Warning for you!";
 
-            public Result(string message = errorMessage, LogLevels status = LogLevels.Info, DateTime time = new DateTime())
+            public Result(DateTime time, string message = errorMessage, LogLevels status = LogLevels.Info)
             {
                 this.status = status;
                 this.timestamp = time;
@@ -69,25 +71,32 @@ namespace HW_5
             }
             public void LogItems(Result res)
             {
-                if(res.status == LogLevels.Error)
+                string currentString;
+                if (res.status == LogLevels.Error)
                 {
                     foreach(Result log in this.errorArr)
                     {
-                        Console.WriteLine($"{log.timestamp}: {log.status.ToString()}: {log.message}");
+                        currentString = $"{log.timestamp}: {log.status.ToString()}: {log.message}";
+                        Console.WriteLine(currentString);
+                        allText = allText + "\n" + currentString;
                     }
                 } else 
                 if (res.status == LogLevels.Warning)
                 {
                     foreach (Result log in this.warningArr)
                     {
-                        Console.WriteLine($"{log.timestamp}: {log.status.ToString()}: {log.message}");
+                        currentString = $"{log.timestamp}: {log.status.ToString()}: {log.message}";
+                        Console.WriteLine(currentString);
+                        allText = allText + "\n" + currentString;
                     }
                 } else 
                 if (res.status == LogLevels.Info)
                 {
                     foreach (Result log in this.infoArr)
                     {
-                        Console.WriteLine($"{log.timestamp}: {log.status.ToString()}: {log.message}");
+                        currentString = $"{log.timestamp}: {log.status.ToString()}: {log.message}";
+                        Console.WriteLine(currentString);
+                        allText = allText + "\n" + currentString;
                     }
                 }
             }
@@ -116,17 +125,17 @@ namespace HW_5
         {
             public static Result InfoAction()
             {
-                return new Result(null, LogLevels.Info);
+                return new Result(DateTime.Now, null, LogLevels.Info);
             }
 
             public static Result ErrorAction()
             {
-                return new Result(null, LogLevels.Error);
+                return new Result(DateTime.Now, null, LogLevels.Error);
             }
 
             public static Result WarningAction()
             {
-                return new Result(null, LogLevels.Warning);
+                return new Result(DateTime.Now, null, LogLevels.Warning);
             }
         }
 
@@ -164,9 +173,40 @@ namespace HW_5
             }
         }
 
+        static public void CreateAFile(string FileName)
+        {
+            string Path = "./" + FileName + ".txt";
+
+            if (!File.Exists(Path))
+            {
+                File.Create("./" + FileName + ".txt").Close();
+            }
+        }
+
+
+        static private void WriteFile(string Document, string FileName = "KornienkoProgramLogs")
+        {
+            string Path = "./" + FileName + ".txt";
+
+            if (!File.Exists(Path))
+            {
+                Program.CreateAFile(FileName);
+            }
+
+            if (File.Exists(Path))
+            {
+                using (StreamWriter sw = new StreamWriter(Path))
+                {
+                    sw.Write(Document);
+                    sw.Close();
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
             Program.Starter.Run();
+            Program.WriteFile(Program.allText);
         }
          
 
