@@ -207,6 +207,7 @@ namespace HW_5
         {
             Program.Starter.Run();
             Program.WriteFile(Program.allText);
+
         }
          
 
