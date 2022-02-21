@@ -39,9 +39,10 @@ namespace NIkitaShopCSharp
         {
             Console.WriteLine("Please tell us the Name of what you want to buy!");
             string nameOfTheProduct = Console.ReadLine();
-            if (Array.Exists(_products, elem => elem.PrintName() == nameOfTheProduct))
+            Product currentProduct = Array.Find(_products, elem => elem.PrintName() == nameOfTheProduct);
+            if (currentProduct != null && !currentProduct.isAvaliable() && !currentProduct.isBooked())
             {
-                Product currentProduct = Array.Find(_products, elem => elem.PrintName() == nameOfTheProduct);
+
                 // Remove money from the wallet
                 if(_user.Purchase(currentProduct.GetPrice()) > 0)
                 {
@@ -67,7 +68,8 @@ namespace NIkitaShopCSharp
         {
             Console.WriteLine("Please tell us, what would you like to book.");
             string name = Console.ReadLine();
-            if (Array.Exists(_products, elem => elem.PrintName() == name))
+            Product currentProduct = Array.Find(_products, elem => elem.PrintName() == name);
+            if (currentProduct != null && !currentProduct.isAvaliable() && !currentProduct.isBooked())
             {
                 // Add an item to the card 
                 _user.AddToCart(name);
