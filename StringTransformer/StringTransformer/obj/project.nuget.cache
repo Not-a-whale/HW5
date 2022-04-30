@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zUpm/GbppGAPeIjVu01D0mgCkFuWYkVtvmgGUFkjUHE9WC6hoC6mAq2tbsru2momsMMRtJW37dw43X8SnkqF4A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sabao\\source\\repos\\StringTransformer\\StringTransformer\\StringTransformer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sabao\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,16 @@
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\bin\Debug\net5.0\StringTransformer.exe
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\bin\Debug\net5.0\StringTransformer.deps.json
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\bin\Debug\net5.0\StringTransformer.runtimeconfig.json
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\bin\Debug\net5.0\StringTransformer.runtimeconfig.dev.json
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\bin\Debug\net5.0\StringTransformer.dll
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\bin\Debug\net5.0\ref\StringTransformer.dll
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\bin\Debug\net5.0\StringTransformer.pdb
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\StringTransformer.csproj.AssemblyReference.cache
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\StringTransformer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\StringTransformer.AssemblyInfoInputs.cache
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\StringTransformer.AssemblyInfo.cs
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\StringTransformer.csproj.CoreCompileInputs.cache
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\StringTransformer.dll
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\ref\StringTransformer.dll
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\StringTransformer.pdb
+C:\Users\sabao\source\repos\StringTransformer\StringTransformer\obj\Debug\net5.0\StringTransformer.genruntimeconfig.cache
