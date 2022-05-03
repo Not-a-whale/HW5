@@ -1,0 +1,16 @@
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\bin\Debug\net5.0\Module1ALevelProject.exe
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\bin\Debug\net5.0\Module1ALevelProject.deps.json
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\bin\Debug\net5.0\Module1ALevelProject.runtimeconfig.json
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\bin\Debug\net5.0\Module1ALevelProject.runtimeconfig.dev.json
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\bin\Debug\net5.0\Module1ALevelProject.dll
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\bin\Debug\net5.0\ref\Module1ALevelProject.dll
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\bin\Debug\net5.0\Module1ALevelProject.pdb
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\Module1ALevelProject.csproj.AssemblyReference.cache
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\Module1ALevelProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\Module1ALevelProject.AssemblyInfoInputs.cache
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\Module1ALevelProject.AssemblyInfo.cs
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\Module1ALevelProject.csproj.CoreCompileInputs.cache
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\Module1ALevelProject.dll
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\ref\Module1ALevelProject.dll
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\Module1ALevelProject.pdb
+C:\Users\sabao\source\repos\Module1ALevelProject\Module1ALevelProject\obj\Debug\net5.0\Module1ALevelProject.genruntimeconfig.cache
