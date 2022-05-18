@@ -152,7 +152,7 @@ namespace ClassHierarchy_hw
             int n;
             bool isNumeric = int.TryParse(optionNumInput, out n);
 
-            if (n != 1 && n != 2)
+            if (n != 1 && n != 2 && isNumeric)
             {
                 WrongInput(ingredientTypes, ingredients);
             }
@@ -160,11 +160,35 @@ namespace ClassHierarchy_hw
             {
                 if (n == 1)
                 {
-                    salad.CountCalories();
+                    Console.WriteLine($"{salad.CountCalories()} cal");
+                    Console.WriteLine("\n");
                 }
                 else if (n == 2)
                 {
-                    salad.SortByType(ingredient.Type);
+                    Console.WriteLine("By which parameters should would you like to sort: ");
+                    Console.WriteLine("By name - 1");
+                    Console.WriteLine("By calories uptake: - 2");
+                    Console.WriteLine("\n");
+                    string optionSortInput = Console.ReadLine();
+                    int optionSortInputNum;
+                    bool isNum = int.TryParse(optionSortInput, out optionSortInputNum);
+                    if (optionSortInputNum != 1 && optionSortInputNum != 2 && !isNum)
+                    {
+                        WrongInput(ingredientTypes, ingredients);
+                    }
+                    else
+                    {
+                        if (optionSortInputNum == 1)
+                        {
+                            salad.SortByType("name");
+                            Console.WriteLine("\n");
+                        }
+                        else
+                        {
+                            salad.SortByType("cal");
+                            Console.WriteLine("\n");
+                        }
+                    }
                 }
             }
 

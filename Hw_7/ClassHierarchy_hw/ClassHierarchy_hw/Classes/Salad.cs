@@ -5,6 +5,8 @@
 namespace ClassHierarchy_hw.Classes
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using ClassHierarchy_hw.Interfaces;
 
     internal class Salad : ISalad
@@ -18,13 +20,46 @@ namespace ClassHierarchy_hw.Classes
 
         public double CountCalories()
         {
+            double sum = 0;
+
             // adds all the calories in all the ingredients
-            return 0.1;
+            foreach (var ingredient in this.Ingredients)
+            {
+                if (ingredient.Measurement == "gramm")
+                {
+                    sum += ingredient.Calories;
+                }
+                else if (ingredient.Measurement == "cup")
+                {
+                    sum += ingredient.Calories * 2;
+                }
+                else if (ingredient.Measurement == "oz")
+                {
+                    sum += ingredient.Calories / 28.3495;
+                }
+            }
+
+            return sum;
         }
 
         public void SortByType(string nameOfType)
         {
-            Console.WriteLine("Sorted By the type");
+            if (nameOfType == "name")
+            {
+                IEnumerable<Ingredient> ingredient = this.Ingredients.OrderBy(ingredient => ingredient.Name);
+                foreach (var ingred in ingredient)
+                {
+                    Console.WriteLine($"- {ingred.Name}, 1 {ingred.Measurement}");
+                }
+            }
+            else
+            {
+                IEnumerable<Ingredient> ingredient = this.Ingredients.OrderBy(ingredient => ingredient.Calories);
+                foreach (var ingred in ingredient)
+                {
+                    Console.WriteLine($"- {ingred.Name}, 1 {ingred.Measurement}");
+                }
+            }
         }
 
         public void AddIngredient(Ingredient ingredient)
