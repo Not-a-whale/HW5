@@ -10,26 +10,34 @@ namespace ClassHierarchy_hw.Classes
         private double calories;
         private double quantity;
         private string measurement;
+        private string type;
 
-        public Ingredient(string name, double calories, double quantity, string measurement)
+        public Ingredient(string name, double calories, double quantity, string measurement, string type)
             : base(name)
         {
             this.Name = name;
             this.Quantity = quantity;
             this.Calories = calories;
             this.Measurement = measurement;
+            this.Type = type;
         }
 
         public new string Name
         {
             get => this.name;
-            set => this.name = $"{base.Name} - {value}";
+            set => this.name = value;
         }
 
         public string Measurement
         {
             get => this.measurement;
             set => this.measurement = value;
+        }
+
+        public string Type
+        {
+            get => this.type;
+            set => this.type = value;
         }
 
         public double Calories

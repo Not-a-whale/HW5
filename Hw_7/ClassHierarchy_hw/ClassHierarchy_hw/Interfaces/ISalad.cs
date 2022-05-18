@@ -11,10 +11,8 @@ namespace ClassHierarchy_hw.Interfaces
         public Ingredient[] Ingredients { get; set; }
 
         // public Ingredient[] Salad();
-
-
-        public string MakeSalad();
-
         public double CountCalories();
+
+        public void AddIngredient(Ingredient ingredient);
     }
 }

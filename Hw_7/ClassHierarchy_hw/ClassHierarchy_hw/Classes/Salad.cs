@@ -4,6 +4,7 @@
 
 namespace ClassHierarchy_hw.Classes
 {
+    using System;
     using ClassHierarchy_hw.Interfaces;
 
     internal class Salad : ISalad
@@ -17,12 +18,26 @@ namespace ClassHierarchy_hw.Classes
 
         public double CountCalories()
         {
-            throw new System.NotImplementedException();
+            // adds all the calories in all the ingredients
+            return 0.1;
         }
 
-        public string MakeSalad()
+        public void SortByType(string nameOfType)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("Sorted By the type");
+        }
+
+        public void AddIngredient(Ingredient ingredient)
+        {
+            Ingredient[] ingredientsArr = this.Ingredients;
+            this.ArrayPush(ref ingredientsArr, ingredient);
+            this.Ingredients = ingredientsArr;
+        }
+
+        public void ArrayPush<T>(ref T[] table, object value)
+        {
+            Array.Resize(ref table, table.Length + 1); // Resizing the array for the cloned length (+-) (+1)
+            table.SetValue(value, table.Length - 1); // Setting the value for the new element
         }
     }
 }

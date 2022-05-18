@@ -7,17 +7,14 @@ namespace ClassHierarchy_hw.Classes
     internal class IngredientType
     {
         private string name;
-        private double maxQuantity;
+        private int maxQuantity;
+        private Ingredient[] selectedIngredients;
 
-        public IngredientType(string name)
-        {
-            this.name = name;
-        }
-
-        public IngredientType(string name, double maxQuantity = 1)
+        public IngredientType(string name, int maxQuantity = 1)
         {
             this.Name = name;
             this.MaxQuantity = maxQuantity;
+            this.SelectedIngredients = new Ingredient[0];
         }
 
         public string Name
@@ -26,10 +23,22 @@ namespace ClassHierarchy_hw.Classes
             set => this.name = value;
         }
 
-        public virtual double MaxQuantity
+        public virtual int MaxQuantity
         {
             get => this.maxQuantity;
             set => this.maxQuantity = value;
+        }
+
+        public virtual Ingredient[] SelectedIngredients
+        {
+            get => this.selectedIngredients;
+            set => this.selectedIngredients = value;
+        }
+
+        public string IsMaxAmountReached()
+        {
+            // Counts number of ingredient of the same type
+            return " ";
         }
     }
 }
